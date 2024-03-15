@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  border-radius: 20px;
+  background-color: yellow;
+  cursor: pointer;
+}
+
+h1 {
+  color: yellow;
+}
+
+img {
+  max-width: 100vw;
+  max-height: 100vw;
+}
+
+.none {
+  display: none;
+}
