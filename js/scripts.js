@@ -1,27 +1,30 @@
-const yes = document.getElementById("yes");
-const no = document.getElementById("no");
-
-const title = document.querySelector(".title");
-
 const body = yes.parentElement;
 
+const buttonNo = document.getElementById("no");
+const buttonYes = document.getElementById("yes");
+
+const title = document.querySelector(".title");
 const img = document.querySelector(".img");
 
-let counterVal = 1;
-
-no.addEventListener("click", (e) => {
-  counterVal++;
-  if (counterVal % 2 == 0) {
-    body.insertBefore(no, yes);
-  } else {
-    body.insertBefore(yes, no);
-  }
+buttonNo.addEventListener("click", () => {
+  buttonNo.style.position = "absolute";
+  buttonNo.style.top = butttonPosition(15, 85);
+  buttonNo.style.left = butttonPosition(15, 85);
 });
 
-yes.addEventListener("click", (e) => {
+buttonYes.addEventListener("click", () => {
   img.classList.remove("none");
   title.classList.add("none");
-  yes.classList.add("none");
-  no.classList.add("none");
-
+  buttonYes.classList.add("none");
+  buttonNo.classList.add("none");
 });
+
+buttonNo.addEventListener("mouseover", () => {
+  buttonNo.style.position = "absolute";
+  buttonNo.style.top = butttonPosition(15, 85);
+  buttonNo.style.left = butttonPosition(15, 85);
+});
+
+function butttonPosition(min, max) {
+  return Math.random() * (max - min) + min + "%";
+}
